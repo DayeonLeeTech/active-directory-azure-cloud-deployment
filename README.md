@@ -46,15 +46,14 @@ The final phase demonstrated the power of **Role-Based Access Control (RBAC)** b
 ---
 
 ## Part 3: Infrastructure Validation & User Experience
-The final stage involved verifying the overall health of the Active Directory environment and ensuring that the administrative changes reflected accurately across the domain.
-* **Directory Integrity Check:** Performed a final validation of the Active Directory structure to ensure all Organizational Units (OUs) and Administrative accounts were correctly provisioned and synchronized.
-* **Client-Side Resolution:** Verified that Client-1 could consistently map network drives and resolve the Domain Controller's resources without latency, confirming a stable link between the Azure virtual nodes.
-* **Permission Finalization:** Audited the final access state for the "ACCOUNTANTS" group, ensuring that the departmental "silo" remained secure from unauthorized domain users while providing full functionality to authorized personnel.
+The final stage involved verifying the impact of administrative changes on the end-user experience. This phase proved that the security tokens were correctly issued and recognized by the network.
+* **Access Grant Verification:** After adding the test user to the "ACCOUNTANTS" group, a final login session was initiated to refresh the user's security token.
+* **End-to-End Connectivity:** Successfully navigated to `\\DC-1\accounting` from Client-1. The workstation confirmed full Read/Write access, validating that the Active Directory backend and the Windows Client were in perfect synchronization.
+* **Security Silo Confirmation:** Conducted a final audit to ensure that while the "accounting" folder was accessible to the authorized user, it remained restricted to others, maintaining strict departmental isolation.
 
 <p align="center">
-  <img src="assets/ad-dc-verification(1).png" width="800" alt="DC and Client Verification" />
+  <img src="assets/client-accounting-access-success.png" width="800" alt="Successful Accounting Share Access" />
 </p>
-
 ---
 
 ## Project Outcome & Key Takeaways
