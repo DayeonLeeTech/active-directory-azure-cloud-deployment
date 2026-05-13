@@ -28,7 +28,9 @@ The first phase focused on establishing the infrastructure for network file shar
 * **Infrastructure Verification:** Confirmed that the Domain Controller was successfully broadcasting these shares over the internal virtual network, making them discoverable via the Universal Naming Convention (UNC) path.
 
 <p align="center">
-  <img src="assets/ad-folder-sharing-permissions-config.png" height='500' width="800" alt="Folder Sharing and Permissions Configuration" />
+  <img src="assets/ad-folder-sharing-permissions-config.png" height="600" width="800" alt="Folder Sharing and Permissions Configuration" />
+  <br>
+  <i>Figure 1: Configuring shared folder permissions and NTFS security settings on the Domain Controller to establish access hierarchies.</i>
 </p>
 
 ---
@@ -41,6 +43,8 @@ The final phase demonstrated the power of **Role-Based Access Control (RBAC)** b
 
 <p align="center">
   <img src="assets/ad-group-members-validation.png" width="800" alt="Security Group Membership and Access Validation" />
+  <br>
+  <i>Figure 2: Creating the "ACCOUNTANTS" Security Group in Active Directory and nesting user objects to implement Role-Based Access Control (RBAC).</i>
 </p>
 
 ---
@@ -53,6 +57,8 @@ The final stage involved verifying the impact of administrative changes on the e
 
 <p align="center">
   <img src="assets/client-accounting-access-success.png" width="800" alt="Successful Accounting Share Access" />
+  <br>
+  <i>Figure 3: Validating successful end-to-end connectivity and permission enforcement from the client workstation via UNC pathing.</i>
 </p>
 
 ---
