@@ -54,6 +54,7 @@ The final stage involved verifying the impact of administrative changes on the e
 <p align="center">
   <img src="assets/client-accounting-access-success.png" width="800" alt="Successful Accounting Share Access" />
 </p>
+
 ---
 
 ## Project Outcome & Key Takeaways
