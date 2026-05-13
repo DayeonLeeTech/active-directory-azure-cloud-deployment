@@ -55,10 +55,12 @@ The final stage involved verifying the impact of administrative changes on the e
 * **End-to-End Connectivity:** Successfully navigated to `\\DC-1\accounting` from Client-1. The workstation confirmed full Read/Write access, validating that the Active Directory backend and the Windows Client were in perfect synchronization.
 * **Security Silo Confirmation:** Conducted a final audit to ensure that while the "accounting" folder was accessible to the authorized user, it remained restricted to others, maintaining strict departmental isolation.
 
+## Part 3: Infrastructure Validation & User Experience
+
 <p align="center">
   <img src="assets/client-accounting-access-success.png" width="800" alt="Successful Accounting Share Access" />
   <br>
-  <i>Figure 3: Validating successful end-to-end connectivity and permission enforcement from the client workstation via UNC pathing.</i>
+  <i>Figure 3: Validating end-to-end connectivity and permission enforcement; demonstrating successful creation of "account_data_test.txt" within the restricted Accounting folder from Client-1.</i>
 </p>
 
 ---
