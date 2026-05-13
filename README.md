@@ -28,7 +28,19 @@ The first phase focused on establishing the infrastructure for network file shar
 * **Infrastructure Verification:** Confirmed that the Domain Controller was successfully broadcasting these shares over the internal virtual network, making them discoverable via the Universal Naming Convention (UNC) path.
 
 <p align="center">
-  <img src="assets/ad-folder-sharing-permissions-config.png" width="800" alt="Folder Sharing and Permissions Configuration" />
+  <img src="assets/ad-folder-sharing-permissions-config.png" height='500' width="800" alt="Folder Sharing and Permissions Configuration" />
+</p>
+
+---
+
+## Part 2: Security Group Implementation & Departmental Isolation
+The final phase demonstrated the power of **Role-Based Access Control (RBAC)** by creating a specific security group to manage departmental data access. This simulates the transition from generic "Domain User" access to restricted, job-specific permissions.
+* **Security Group Provisioning:** Created the "ACCOUNTANTS" Security Group within Active Directory. This allows for administrative scalability, as permissions are managed at the group level rather than per individual user.
+* **Membership Validation:** Conducted a "before-and-after" access test. Initially, the test user was denied access to the "accounting" share. After adding the user to the "ACCOUNTANTS" group on DC-1 and re-authenticating, access was successfully granted.
+* **Access Auditing:** Verified that the user could now read and write to the departmental folder, confirming that the new security tokens were correctly issued by the Domain Controller upon the new login session.
+
+<p align="center">
+  <img src="assets/ad-group-members-validation.png" width="800" alt="Security Group Membership and Access Validation" />
 </p>
 
 ---
