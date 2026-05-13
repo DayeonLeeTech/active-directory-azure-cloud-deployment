@@ -20,3 +20,15 @@ This lab focuses on the implementation of **Network File Sharing** and **Role-Ba
 * **Network Resource Discovery:** Utilizing the Universal Naming Convention (UNC) pathing (`\\DC-1\`) to map and test network shares.
 * **Microsoft Azure:** Orchestrating communication between a Domain Controller (DC-1) and a Windows Client (Client-1) within a cloud-native Virtual Network.
 ---
+
+## Part 1: Shared Resource Provisioning & Access Control
+The first phase focused on establishing the infrastructure for network file sharing and defining the baseline security posture for various organizational folders. This demonstrates the practical application of NTFS and Share permissions to control data visibility.
+* **Directory Creation:** Established a set of functional folders on the Domain Controller (DC-1) to simulate various access scenarios, including restricted, open-read, and departmental repositories.
+* **Permission Mapping:** Configured specific access levels for "Domain Users" and "Domain Admins." This included verifying that users could read data in "read-access" but were restricted from making modifications, enforcing data integrity.
+* **Infrastructure Verification:** Confirmed that the Domain Controller was successfully broadcasting these shares over the internal virtual network, making them discoverable via the Universal Naming Convention (UNC) path.
+
+<p align="center">
+  <img src="assets/ad-folder-sharing-permissions-config.png" width="800" alt="Folder Sharing and Permissions Configuration" />
+</p>
+
+---
