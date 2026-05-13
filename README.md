@@ -44,3 +44,35 @@ The final phase demonstrated the power of **Role-Based Access Control (RBAC)** b
 </p>
 
 ---
+
+## Part 3: Infrastructure Validation & User Experience
+The final stage involved verifying the overall health of the Active Directory environment and ensuring that the administrative changes reflected accurately across the domain.
+* **Directory Integrity Check:** Performed a final validation of the Active Directory structure to ensure all Organizational Units (OUs) and Administrative accounts were correctly provisioned and synchronized.
+* **Client-Side Resolution:** Verified that Client-1 could consistently map network drives and resolve the Domain Controller's resources without latency, confirming a stable link between the Azure virtual nodes.
+* **Permission Finalization:** Audited the final access state for the "ACCOUNTANTS" group, ensuring that the departmental "silo" remained secure from unauthorized domain users while providing full functionality to authorized personnel.
+
+<p align="center">
+  <img src="assets/ad-dc-verification(1).png" width="800" alt="DC and Client Verification" />
+</p>
+
+---
+
+## Project Outcome & Key Takeaways
+The lab successfully established a secure, role-based file sharing environment within an Azure-hosted Active Directory forest. By implementing Security Groups and granular NTFS/Share permissions, the project demonstrated how to effectively manage organizational data, ensuring that users have access only to the resources necessary for their specific roles.
+
+### Core Technical Competencies
+* **Role-Based Access Control (RBAC):** Implementing the "Principle of Least Privilege" by utilizing Active Directory Security Groups to manage folder permissions.
+* **File System Security:** Managing the intersection of Share permissions and NTFS permissions to ensure a secure and functional user experience.
+* **Identity Management:** Provisioning and auditing user group memberships within Active Directory Users and Computers (ADUC).
+* **Network Resource Mapping:** Troubleshooting and validating Universal Naming Convention (UNC) paths and resource discovery across a cloud-based Virtual Network.
+
+### Key Takeaways
+* **Permission Inheritance:** Gained a practical understanding of how permission inheritance works and how to override it for sensitive departmental folders (e.g., Accounting).
+* **Group Policy Logic:** Observed that group membership changes require a fresh login token to take effect, a critical realization for real-world IT support and troubleshooting.
+* **Administrative Scalability:** Validated that managing permissions via Security Groups is far more efficient and less error-prone than assigning permissions to individual user accounts.
+* **Data Siloing:** Successfully simulated a corporate environment where departmental data is isolated, protecting sensitive information from unauthorized internal access.
+
+---
+
+## Conclusion & Cleanup
+To maintain cost-efficiency and security hygiene, the DC-1 and Client-1 virtual machines were decommissioned upon the successful validation of the access control policies. This lab serves as a foundational exercise in managing enterprise-level data security and identity services in a cloud environment.
