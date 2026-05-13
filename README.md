@@ -28,7 +28,7 @@ The first phase focused on establishing the infrastructure for network file shar
 * **Infrastructure Verification:** Confirmed that the Domain Controller was successfully broadcasting these shares over the internal virtual network, making them discoverable via the Universal Naming Convention (UNC) path.
 
 <p align="center">
-  <img src="assets/ad-folder-sharing-permissions-config.png" height="600" width="800" alt="Folder Sharing and Permissions Configuration" />
+  <img src="assets/ad-folder-sharing-permissions-config.png" style="max-height: 400px; width: auto;" alt="Folder Sharing and Permissions Configuration" />
   <br>
   <i>Figure 1: Configuring shared folder permissions and NTFS security settings on the Domain Controller to establish access hierarchies.</i>
 </p>
